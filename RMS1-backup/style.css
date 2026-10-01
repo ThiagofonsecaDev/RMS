@@ -22,13 +22,25 @@
   box-sizing: border-box;
 }
 
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active,
+button {
+  text-decoration: none;
+}
+
 html {
+  color-scheme: dark;
+  background-color: #03060c;
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #03060c;
   background: radial-gradient(circle at top, #12355d 0%, #07111F 50%, #03060c 100%);
   color: var(--white);
   overflow-x: hidden;
@@ -1173,10 +1185,18 @@ label,
   header .container {
     height: auto;
     padding: 14px 0;
+    gap: 12px;
   }
 
   .logo {
-    width: 280px;
+    width: min(280px, calc(100vw - 108px));
+    min-width: 0;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
   }
 
   .hero {
